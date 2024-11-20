@@ -1,0 +1,501 @@
+@charset "utf-8";
+
+body{
+    width: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    line-height: 1.5;
+}
+.vdbanner{
+    nav-index: -60px 0;
+}
+
+h1{
+    font-size: 5vw;
+}
+
+p{
+    font-size: 1.6vw;
+}
+
+img{
+    width: 100%;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.container{
+    width: 41.6vw;
+    height: 66.6vw;
+}
+
+.container .left_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: slideLeft 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideLeft{
+    0% {
+        transform: translateX(-180px);
+        opacity: 0;
+      }
+    100% {
+        transform: translateX(0);
+      }
+    40%,100% {
+        opacity: 1;
+      }
+}
+
+nav{
+    width: 58.3vw;
+    height: 6.9vw;
+    background-color: #919191;
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    animation: slideTop 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideTop{
+    0% {
+        transform: translateY(-180px);
+        opacity: 0;
+      }
+    100% {
+        transform: translateY(0 );
+      }
+    40%,100% {
+        opacity: 1;
+      }
+}
+
+nav a{
+    padding: 2.7vw;
+    text-decoration: none;
+    display: inline-block;
+    color: #2f2f2f;
+}
+.right{
+    display: block;
+    height: 66.6vw;
+}
+.container h1{
+    position: absolute;
+    top: 41.6vw;
+    left: 21.4vw;
+    color: #FFFFFF;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+
+.right .right_img{
+    max-width: 58.3vw;
+    height: 59.7vw;
+    object-fit: cover;
+    filter: grayscale(0.8);
+    animation: slideRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideRight{
+    0% {
+        transform: translateX(180px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+      }
+      40%,100% {
+        opacity: 1;
+      }
+}
+
+main{
+    padding: 0;
+    margin: 0;
+}
+
+.main1{
+    margin: 0;
+    width: 70%;
+    height: 41vw;
+    display: flex;
+    padding: 12% 15%;
+    background-image: url(../images/wood.png);
+    justify-content: center;
+    align-items: center;
+}
+
+.main1 img{
+    width: 50%;
+    height: 82%;
+    object-fit: cover;
+    box-shadow: -40px -30px #2f2f2f;
+}
+
+.main1 .text{
+    max-width: 24.3vw;
+    padding: 0 3.5vw 0 7vw;
+    text-align: center;
+}
+.text p{
+    overflow-wrap: break-word;
+    overflow-x: scroll;
+}
+
+.main1 .link_img{
+    display: block;
+    width: 24.3vw;
+    padding: 0 3.47vw 0 6.94vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.main1 .link_img img{
+    width: 10.4vw;
+    height: 10.4vw;
+    box-shadow: none;
+    padding: 15px;
+}
+
+.mail_img img{
+    border-radius: 3vw;
+}
+
+.main2 {
+    width: 100%;
+    height: auto; /* 固定高さを避け、コンテンツに応じて高さが変わるように */
+    background-image: url(./img/wave2.png);
+    background-repeat: no-repeat; /* 画像をカバーするように調整 */
+    background-position: center; /* 中央に画像を表示 */
+    padding: 4vw 0;
+    text-align: center;
+}
+
+.main2 h1 {
+    font-size: 4vw; /* レスポンシブなフォントサイズ */
+    color: #FFFFFF;
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.main2 .works {
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* 画像間に余白を追加 */
+    margin: 4% 14%;
+}
+
+.works .image-container {
+    width: 100%;
+    max-width: 300px; /* 最大幅を設定 */
+    position: relative;
+}
+
+.works .image-container img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover; /* 画像がコンテナに収まるよう調整 */
+    aspect-ratio: 1/1;
+}
+
+.figma_link{
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0.6vw;
+    padding: 1.4vw;
+    text-decoration: none;
+}
+
+.figma_link a{
+    font-size: 1.6vw;
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #2f2f2f;
+}
+
+footer p{
+    padding: 3.125vw 3.646vw;
+    font-size: 1.7vw;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media (max-width:390px) {
+    html{
+        overflow-x: hidden;
+    }
+
+    body{
+        width: 100%;
+        font-family: "Noto Sans JP", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        margin: 0;
+        line-height: 1.5;
+        max-width: 390px;
+        }
+    
+    h1{
+        font-size: 5.5vw;
+        }
+    
+    p{
+        font-size: 3.5vw;
+        }
+    
+    img{
+        width: 100%;
+        }
+    
+    .header{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        }
+    
+    .container{
+        width: 0;
+        height: 0;
+        }
+    
+    .container .left_img{
+        width: 0;
+        height: 0;
+        object-fit: cover;
+        }
+    
+    
+    nav{
+        display: none;
+        width: 0;
+        height: 0;
+        
+    }
+    
+    
+    nav p{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .right{
+        width: 100%;
+        max-height: 390px;
+        display: block;
+        height: 66.6vw;
+    }
+    .container h1{
+        position: absolute;
+        top: 56.5vw;
+        left: 50%;
+        color: #FFFFFF;
+        z-index: 1;
+    }
+    
+    .right .right_img{
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(0.8);
+        animation: slideRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    
+    @keyframes slideRight{
+        0% {
+            transform: translateY(0 180px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+          }
+          40%,100% {
+            opacity: 1;
+          }
+    }
+    
+    main{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .main1{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vw;
+        display: flex;
+        background-image: url(./img/wood.png);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main1 img{
+        width: 45.6vw;
+        height: 45.6vw;
+        object-fit: cover;
+        box-shadow: none;
+        border-radius: 100px;
+    }
+    
+    .main1 .text{
+        padding: 0 3.5vw 0 7vw;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text p{
+        margin:0.3vw 0;
+        max-height: 20.5vw;
+        width: 31.6vw;
+        overflow-wrap: break-word;
+        overflow-x: scroll;
+        scrollbar-base-color: #919191;
+    }
+    .text h1{
+        width: 41.6vw;
+        margin:0.3vw 0 3.8vw 0;
+    }
+    
+    .main1 .link_img{
+        display: block;
+        width: 24.3vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main1 .link_img img{
+        width: 10.4vw;
+        height: 10.4vw;
+        box-shadow: none;
+        padding: 15px;
+    }
+    
+    .main2 {
+        width: 100%;
+        height: auto; /* 固定高さを避け、コンテンツに応じて高さが変わるように */
+        background-image: url(./img/wave2.png);
+        background-repeat: no-repeat; /* 画像をカバーするように調整 */
+        background-position: center; /* 中央に画像を表示 */
+        padding: 4vw 0;
+        margin: 0 0 25.4vw 0 ;
+    }
+    
+    .main2 h1 {
+        font-size: 4vw; /* レスポンシブなフォントサイズ */
+        color: #FFFFFF;
+        z-index: 1;
+        text-align: center;
+        margin: 4% 0;
+    }
+    
+    .main2 .works {
+        display: block;
+        justify-content: center;
+        gap: 5vw; /* 画像間に余白を追加 */
+        margin: 0 14%;
+    }
+    
+    .works .image-container {
+        width: 77vw;
+        max-width: 300px; /* 最大幅を設定 */
+        height: 100%;
+        position: relative;
+    }
+    
+    .works .image-container img {
+        width: 77vw;
+        height: 51vw;
+        margin: 5vw 0;
+        max-height: 300px;
+        object-fit: cover; /* 画像がコンテナに収まるよう調整 */
+        aspect-ratio: 1/1;
+        border-radius: 5.1vw;
+    }
+    
+    footer {
+        width: 100%;
+        max-width: 390px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: #2f2f2f;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer a{
+        width: 9.5vw;
+        height: 9.5vw;
+        margin: 6vw;
+    }
+    
+    footer p{
+        width: 6vw;
+        height: 6vw;
+        color: white;
+        visibility: hidden;
+        margin: 4vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home{
+        background-image: url(./img/icon_home.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about{
+        background-image: url(./img/icon_about.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .work_footer{
+        background-image: url(./img/icon_works.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .contact{
+        background-image: url(./img/icon_contact.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .up{
+        background-image: url(./img/icon_top.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+}
