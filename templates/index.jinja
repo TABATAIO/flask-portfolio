@@ -17,12 +17,33 @@ Tabata Io
 <div class="text">
     <p>WHO I AM</p>
     <h1>HELLO</h1>
-    <p>KDGN2年webエンジニア専攻<br>所有スキル<br>HTML,CSS,Figma,XD,(以下勉強中)Photoshop,Illastrater,JavaScript<br>経歴<br>国府高校卒業<br>23' 2
-        コサキ株式会社 スクールIE 塾講師(アルバイト)<br>23' 10 株式会社ドミノ・ピザジャパン(アルバイト) <br></p>
+    <p>KDGN2年webエンジニア専攻<br>webのデザインエンジニアになれるように日々奮闘中！</p>
+    <button><a href="{{ url_for('about') }}"><p>Learn more</p></a></button>
 </div>
+
 
 {% endblock main1 %}
 
+{% block main2_title %}
+WHAT HAVE I DONE
+{% endblock main2_title %}
+
+{% block works_content %}
+<div class="works">
+    <a href="{{ url_for('migake') }}" class="image-container"><img
+        src="{{ url_for('static', filename='images/Login.png') }}" alt=""></a>
+    <a href="{{ url_for('precompany') }}" class="image-container"><img
+        src="{{ url_for('static',filename='images/Top.png') }}" alt=""></a>
+    <a href="#" class="image-container"><img src="../img/schoolfecworks.png" alt="preparing"></a>
+</div>
+
+    
+    
+{% endblock works_content %}
+
 {% block footer %}
+<a href="#"><p>top</p></a>
+<a href="#about" ><p>about</p></a>
+<a href="#works" ><p>works</p></a>
 <a href="{{url_for('contact')}}"><p>contact</p></a>
 {% endblock footer %}

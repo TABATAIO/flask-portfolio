@@ -145,13 +145,55 @@ main{
 
 .main1 .text{
     max-width: 24.3vw;
-    padding: 0 3.5vw 0 7vw;
+    padding: 0 3.5vw 0 3.5vw;
+    margin: 0 0 0 3.5vw;
     text-align: center;
+    background-color: rgba(255,255, 255, 0.5);
 }
 .text p{
     overflow-wrap: break-word;
     overflow-x: scroll;
 }
+
+.text button{
+    height: 3.5vw;
+    width: 60%;
+    margin: 3.5vw 0;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 2vw;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: -6px -6px 10px #FFFFFF,6px 6px 10ox #2f2f2f;
+    transition: all 0.3s;
+}
+
+.text button:hover{
+    box-shadow: 2px 2px 2px #FFFFFF, -2px -2px 2px #2f2f2f;
+}
+
+.text button a{
+    text-decoration: none;
+    color: #2f2f2f;
+    transition: all 0.3s;
+}
+
+.text button a p{
+    font-size: 1.6vw;
+    transition: all 0.3s;
+}
+
+.text button:hover a p{
+    font-size: 1.8vw;
+}
+
+.text button a p{
+    margin: 0;
+}
+
+
 
 .main1 .link_img{
     display: block;
@@ -175,7 +217,7 @@ main{
 .main2 {
     width: 100%;
     height: auto; /* 固定高さを避け、コンテンツに応じて高さが変わるように */
-    background-image: url(./img/wave2.png);
+    background-image: url(../images/wave2.png);
     background-repeat: no-repeat; /* 画像をカバーするように調整 */
     background-position: center; /* 中央に画像を表示 */
     padding: 4vw 0;

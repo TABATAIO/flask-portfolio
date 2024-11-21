@@ -7,6 +7,7 @@
     <title>{% block title %}
 
         {% endblock title %}</title>
+    <link href="https://unpkg.com/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../static/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jQueryの追加 -->
@@ -28,15 +29,18 @@
 
             <div class="right">
                 <nav class="nav">
-                    <a href="#about">
-                        <p>about</p>
-                    </a>
-                    <a href="#works">
-                        <p>works</p>
-                    </a>
-                    <a href="./contact.html">
-                        <p>contact</p>
-                    </a>
+                {% block nav %}
+                <a href="#about">
+                    <p>about</p>
+                </a>
+                <a href="#works">
+                    <p>works</p>
+                </a>
+                <a href="./contact.html">
+                    <p>contact</p>
+                </a>
+                {% endblock nav %}
+                   
                 </nav>
                 {% block right_img %}
                 <img class="right_img" src="{{ url_for('static', filename='./images/me_child.png') }}"
@@ -103,8 +107,9 @@
         
     </footer>
 
-
-    <script src="../my_script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+    <script src="../static/js/my_script.js"></script>
 </body>
 
 </html>

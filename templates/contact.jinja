@@ -12,6 +12,15 @@ Contact
 <img class="right_img" src="{{ url_for('static', filename='./images/confalence.png') }}" alt="me_in_child">
 {% endblock right_img %}
 
+{% block nav %}
+<a href="{{url_for('home')}}">
+    <p>home</p>
+</a>
+<a href="{{url_for('contact')}}">
+    <p>contact</p>
+</a>
+{% endblock nav %}
+
 {% block main1 %}
 <img src="../static/images/phone.png" alt="">
             <div class="link_img">
@@ -25,6 +34,4 @@ Contact
 {% block footer %}
 <a class="home" href="{{ url_for('home') }}"><p>home</p></a>
 <a href="#"><p>top</p></a>
-<a href="{{ url_for('home') }}" ><p>about</p></a>
-<a href="{{ url_for('home') }}" ><p>works</p></a>
 {% endblock footer %}

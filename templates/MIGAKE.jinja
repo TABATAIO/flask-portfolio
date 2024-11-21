@@ -1,0 +1,55 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    MIGAKE
+{% endblock title %}
+
+{% block FV_title %}
+    TechJam制作作品
+{% endblock FV_title %}
+
+{% block right_img %}
+<img class="right_img" src="{{ url_for('static',filename='images/Login.png') }}">
+{% endblock right_img %}
+
+{% block nav %}
+<a href="{{url_for('home')}}">
+    <p>home</p>
+</a>
+<a href="{{url_for('contact')}}">
+    <p>contact</p>
+</a>
+{% endblock nav %}
+
+{% block main1 %}
+    <img src="{{ url_for('static',filename='images/Login.png') }}" alt="ログインイメージ">
+    <div class="text">
+        <p>what is this</p>
+        <h1>MIGAKE</h1> 
+        <p>08/28/24に開催されたTechjam(学年の専攻もバラバラのメンバーで集まって一つの作品を制作するイベント)にて製作した恋活アプリ。「バズり」が一つの目標で私のチームでは
+        提案ではなく指示をするという形のものでバズりを狙った。指示になってしまうのでどうしても重めのアプリになりそうだったが、丸みを帯びたデザインを採用することでバランスの
+        良いアプリができた。
+        </p>
+            </div>
+{% endblock main1 %}
+
+{% block main2 %}
+<div class="main2" id="works">
+    <h1>OTHER IMAGES</h1>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/home.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/home.png' )}}" alt="home image"></a>
+        <a href="{{ url_for('static',filename='images/BUILD.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/BUILD.png') }}" alt="build before"></a>
+        <a href="{{ url_for('static',filename='images/BUILD(_after).png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/BUILD(_after).png') }}" alt="build after"></a>
+    </div>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/fasion.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/fasion.png') }}" alt="fashion fv"></a>
+        <a href="{{ url_for('static',filename='images/migake_route.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/migake_route.png') }}" alt="how worked on figma"></a>
+    </div>
+</div>
+{% endblock main2 %}
+
+{% block footer %}
+<a class="home" href="{{ url_for('home') }}"><p>home</p></a>
+<a href="#"><p>top</p></a>
+<a href="{{ url_for('contact') }}" ><p>contact</p></a>
+{% endblock footer %}
