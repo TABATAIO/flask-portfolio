@@ -1,0 +1,30 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+contact
+{% endblock title %}
+
+{% block FV_title %}
+Contact
+{% endblock FV_title %}
+
+{% block right_img %}
+<img class="right_img" src="{{ url_for('static', filename='./images/confalence.png') }}" alt="me_in_child">
+{% endblock right_img %}
+
+{% block main1 %}
+<img src="../static/images/phone.png" alt="">
+            <div class="link_img">
+                <a href="mailto:io.tabata.info@iotabata.shop?subject=contact"><img class="mail_img" src="../static/images/mail.jpg" alt=""></a>
+                <img src="../static/images/Discord.png" alt="">
+                <a href="https://www.instagram.com/millenniumkdg/"><img src="../static/images/instagram.png" alt=""></a>
+{% endblock main1 %}
+{% block main2 %}
+
+{% endblock main2 %}
+{% block footer %}
+<a class="home" href="{{ url_for('home') }}"><p>home</p></a>
+<a href="#"><p>top</p></a>
+<a href="{{ url_for('home') }}" ><p>about</p></a>
+<a href="{{ url_for('home') }}" ><p>works</p></a>
+{% endblock footer %}

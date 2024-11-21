@@ -10,10 +10,14 @@ def home():
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
     
-@app.route('/MIGAKE')
+@app.route('/work/MIGAKE')
 def migake():
     return render_template('MIGAKE.jinja')
 
 @app.route('/precompany')
 def precompany():
     return render_template('precompany.jinja')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.jinja')

@@ -8,16 +8,21 @@ portfolio
 Tabata Io
 {% endblock FV_title %}
 
+{% block right_img %}
 <img class="right_img" src="{{ url_for('static', filename='./images/me_child.png') }}" alt="me_in_child">
+{% endblock right_img %}
 
-{% block main1_title %}
-who i am
-{% endblock main1_title %}
+{% block main1 %}
+<img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+<div class="text">
+    <p>WHO I AM</p>
+    <h1>HELLO</h1>
+    <p>KDGN2年webエンジニア専攻<br>所有スキル<br>HTML,CSS,Figma,XD,(以下勉強中)Photoshop,Illastrater,JavaScript<br>経歴<br>国府高校卒業<br>23' 2
+        コサキ株式会社 スクールIE 塾講師(アルバイト)<br>23' 10 株式会社ドミノ・ピザジャパン(アルバイト) <br></p>
+</div>
 
-{% block main1_coment %}
-Hello
-{% endblock main1_coment %}
+{% endblock main1 %}
 
-{% block main1_text %}
-KDGN2年webエンジニア専攻<br>所有スキル<br>HTML,CSS,Figma,XD,(以下勉強中)Photoshop,Illastrater,JavaScript<br>経歴<br>国府高校卒業<br>23' 2 コサキ株式会社 スクールIE 塾講師(アルバイト)<br>23' 10 株式会社ドミノ・ピザジャパン(アルバイト) <br>
-{% endblock main1_text %}
+{% block footer %}
+<a href="{{url_for('contact')}}"><p>contact</p></a>
+{% endblock footer %}
