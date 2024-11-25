@@ -13,14 +13,15 @@ Tabata Io
 {% endblock right_img %}
 
 {% block main1 %}
-<img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
-<div class="text">
-    <p>WHO I AM</p>
-    <h1>HELLO</h1>
-    <p>KDGN2年webエンジニア専攻<br>webのデザインエンジニアになれるように日々奮闘中！</p>
-    <button><a href="{{ url_for('about') }}"><p>Learn more</p></a></button>
+<div class="main1" id="about">
+    <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+    <div class="text">
+        <p>WHO I AM</p>
+        <h1>HELLO</h1>
+        <p>KDGN2年webエンジニア専攻<br>webのデザインエンジニアになれるように日々奮闘中！</p>
+        <button><a href="{{ url_for('about') }}"><p>Learn more</p></a></button>
+    </div>
 </div>
-
 
 {% endblock main1 %}
 
@@ -40,6 +41,10 @@ WHAT HAVE I DONE
     
     
 {% endblock works_content %}
+
+{% block main3 %}
+
+{% endblock main3 %}
 
 {% block footer %}
 <a href="#"><p>top</p></a>

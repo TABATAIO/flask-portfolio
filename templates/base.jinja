@@ -36,7 +36,7 @@
                 <a href="#works">
                     <p>works</p>
                 </a>
-                <a href="./contact.html">
+                <a href="{{url_for('contact')}}">
                     <p>contact</p>
                 </a>
                 {% endblock nav %}
@@ -51,17 +51,19 @@
 
         </div>
     </header>
-    <main>
+    <main> 
+    {% block main1 %}
         <div class="main1" id="about">
-            {% block main1 %}
-            <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+           
+            <img src="{{ () }}" alt="me_in_festival">
             <div class="text">
                 <p></p>
                 <h1></h1>
                 <p></p>
             </div>
-            {% endblock main1 %}
+            
         </div>
+    {% endblock main1 %}
         {% block main2 %}
         <div class="main2" id="works">
             <h1>{% block main2_title %}
@@ -83,11 +85,16 @@
             </div>
             {% endblock works_content %}</div>
         {% endblock main2 %}
-        
-            
-
+        {% block main3 %}
+        <div class="main3">
+            <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+            <div class="introduce_text_box">
+                <div class="history_box">
+                    <p>'04 誕生<br>'23 国府高校 卒業<br>'26 KADOKAWAドワンゴ情報工科学院 卒業見込み</p>
+                </div>
+            </div>
         </div>
-        </div>
+        {% endblock main3 %}
     </main>
     <footer>
     {% block footer %}

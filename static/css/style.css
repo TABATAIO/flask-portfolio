@@ -284,6 +284,30 @@ footer p{
     display: inline-block;
 }
 
+.main3{
+    margin: 0;
+    width: 70%;
+    height: 41vw;
+    display: flex;
+    flex-flow: column;
+    padding: 12% 15%;
+    background-image: url(../images/wood.png);
+    justify-content: center;
+    align-items: center;
+}
+
+.main3 img{
+    width: 50%;
+    height: 82%;
+    object-fit: cover;
+    box-shadow: -40px -30px #2f2f2f;
+}
+
+.main3 .introduce_box{
+    display: flex;
+    flex-flow: column;
+}
+
 @media (max-width:390px) {
     html{
         overflow-x: hidden;
