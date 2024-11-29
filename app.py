@@ -25,3 +25,7 @@ def contact():
 @app.route('/about')
 def about():
     return render_template('about.jinja')
+
+@app.route('/work/Logos')
+def Logos():
+    return render_template('Logos.jinja')

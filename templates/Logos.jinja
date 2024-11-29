@@ -1,0 +1,59 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+Logos
+{% endblock title %}
+
+{% block FV_title %}
+Logos
+{% endblock FV_title %}
+{% block right_img %}
+<img class="right_img" src="{{ url_for('static', filename='./images/logo1.png') }}"
+    alt="me_in_child">
+{% endblock right_img %}
+
+{% block main1 %}
+<div class="main1" id="about">       
+    <img src="{{ url_for('static',filename='images/logo1.png') }}" alt="me_in_festival">
+    <div class="text">
+        <p></p>
+        <h1>ロゴたち</h1>
+        <p>イラストレーターの練習兼趣味でロゴなどを作ってきました。</p>
+    </div>
+    
+</div>
+{% endblock main1 %}
+
+{% block main2 %}
+<div class="main2" id="works">
+    <h1>WORKS</h1>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/app_logoMIGAKE.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/app_logoMIGAKE.png' )}}" alt="MIGAKEのアプリアイコン"></a>
+        <a href="{{ url_for('static',filename='images/EcoWave_Ventures_logo.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/EcoWave_Ventures_logo.png') }}" alt="build before"></a>
+        <a href="{{ url_for('static',filename='images/windelect.svg') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/windelect.svg') }}" alt="build after"></a>
+    </div>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/my_logo.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/my_logo.png') }}" alt="fashion fv"></a>
+        <a href="{{ url_for('static',filename='images/unknown_coffee_logo-(1)/png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/unknown_coffee_logo-(1).png') }}" alt="how worked on figma"></a>
+    </div>
+</div>
+{% endblock main2 %}
+
+{% block main3 %}
+
+{% endblock main3 %}
+
+{% block footer %}
+    <a href="#" class="up">
+        <p>top</p>
+    </a>
+    <a href="#works" class="work_footer">
+        <p>works</p>
+    </a>
+    <a href="{{ url_for('home') }}" class="about">
+        <p>home</p>
+    </a>
+    <a href="./contact.html" class="contact">
+        <p>contact</p>
+    </a>
+{% endblock footer %}
