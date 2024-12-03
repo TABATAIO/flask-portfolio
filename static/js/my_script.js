@@ -15,3 +15,17 @@ $(function () {
     });
   });
   
+var bar = new ProgressBar.Path('#namelogo', {
+    easing: 'easeInOut',
+    duration: 3000
+  });
+
+$(window).on('load',function(){
+  $('.splash_container').delay(3500).fadeOut('slow');
+})
+  
+
+
+
+bar.set(0);
+bar.animate(-1.0);  

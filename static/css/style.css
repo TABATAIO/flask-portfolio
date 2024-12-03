@@ -9,6 +9,7 @@ body{
     margin: 0;
     line-height: 1.5;
 }
+
 .vdbanner{
     nav-index: -60px 0;
 }
@@ -118,6 +119,28 @@ nav a{
       40%,100% {
         opacity: 1;
       }
+}
+
+.splash_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #fff;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.splash_container .splash_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splash_content svg{
+    width: 50%;
+    height: 50%;
 }
 
 main{
@@ -307,6 +330,8 @@ footer p{
     display: flex;
     flex-flow: column;
 }
+
+
 
 @media (max-width:390px) {
     html{
