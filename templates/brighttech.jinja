@@ -1,0 +1,62 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    BrightTech
+{% endblock title %}
+
+{% block FV_title %}
+    BrightTech
+{% endblock FV_title %}
+
+{% block right_img %}
+<img class="right_img" src="{{ url_for('static',filename='images/precompany_top.png') }}">
+{% endblock right_img %}
+
+{% block nav %}
+<a href="{{url_for('home')}}">
+    <p>home</p>
+</a>
+<a href="{{url_for('contact')}}">
+    <p>contact</p>
+</a>
+{% endblock nav %}
+
+{% block main1 %}
+<div class="main1" id="about">
+    <div class="img_box">
+        <img src="{{ url_for('static',filename='images/precompany_top.png') }}" alt="ログインイメージ">
+    </div>
+    <div class="text">
+        <p>what is this</p>
+        <h1>BrightTech</h1> 
+        <p>
+        ChatGPTを活用して仮想の企業を制作して依頼を受けるという形で初めて作ったものです。相手の指定した色や制作するページなど、今まで授業でやってきたマネではなく１から自分で作る初めてのものでしたがうまく作ることができました。BrightTechははITコンサル会社でホームページの一新のための依頼で、「ホーム、会社情報、問い合わせフォーム」のページを作りました。色は青と灰色を指定されたのでその色を使いつつITらしくすっきりとしたページを目指しました。
+        </p>
+    </div>
+</div>
+{% endblock main1 %}
+
+{% block main2 %}
+<div class="main2" id="works">
+    <h1>OTHER IMAGES</h1>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/precompany_top.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_top.png' )}}" alt="home image"></a>
+        <a href="{{ url_for('static',filename='images/precompany_Top(for phone).png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_Top(for phone).png') }}" alt="build before"></a>
+        <a href="{{ url_for('static',filename='images/precompany_projectdetail.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_projectdetail.png') }}" alt="build after"></a>
+    </div>
+    <div class="works">
+        <a href="{{ url_for('static',filename='images/precompany_PROJECTS(for phone).png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_PROJECTS(for phone).png') }}" alt="fashion fv"></a>
+        <a href="{{ url_for('static',filename='images/precompany_contact.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_contact.png') }}" alt="how worked on figma"></a>
+        <a href="{{ url_for('static',filename='images/precompany_contact(for phone).png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/precompany_contact(for phone).png') }}" alt="how worked on figma"></a>
+    </div>
+</div>
+{% endblock main2 %}
+
+{% block footer %}
+{% block main3 %}
+
+{% endblock main3 %}
+<a class="home" href="{{ url_for('home') }}"><p>home</p></a>
+<a href="#"><p>top</p></a>
+<a href="{{ url_for('contact') }}" ><p>contact</p></a>
+{% endblock footer %}

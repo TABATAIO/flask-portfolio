@@ -14,7 +14,9 @@ Tabata Io
 
 {% block main1 %}
 <div class="main1" id="about">
-    <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+    <div class="img_box">
+        <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+    </div>
     <div class="text">
         <p>WHO I AM</p>
         <h1>HELLO</h1>
@@ -33,7 +35,7 @@ WHAT HAVE I DONE
 <div class="works">
     <a href="{{ url_for('migake') }}" class="image-container"><img
         src="{{ url_for('static', filename='images/Login.png') }}" alt=""></a>
-    <a href="{{ url_for('precompany') }}" class="image-container"><img
+    <a href="{{ url_for('brighttech') }}" class="image-container"><img
         src="{{ url_for('static',filename='images/Top.png') }}" alt=""></a>
     <a href="{{ url_for('Logos') }}" class="image-container"><img src="{{ url_for('static',filename='images/logo1.png')}}" alt="preparing"></a>
 </div>

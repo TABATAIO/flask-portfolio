@@ -14,9 +14,9 @@ if __name__ == "__main__":
 def migake():
     return render_template('MIGAKE.jinja')
 
-@app.route('/precompany')
-def precompany():
-    return render_template('precompany.jinja')
+@app.route('/work/brighttech')
+def brighttech():
+    return render_template('brighttech.jinja')
 
 @app.route('/contact')
 def contact():
