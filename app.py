@@ -29,3 +29,7 @@ def about():
 @app.route('/work/Logos')
 def Logos():
     return render_template('Logos.jinja')
+
+@app.route('/work/poster')
+def dominos():
+    return render_template('dominos_blackfriday_poster.jinja')

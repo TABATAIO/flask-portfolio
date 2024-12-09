@@ -1,0 +1,56 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    Dominos BlackFriday Poster
+{% endblock title %}
+
+{% block FV_title %}
+    BlackFriday
+{% endblock FV_title %}
+
+{% block right_img %}
+<img class="right_img" src="{{ url_for('static',filename='images/dominos_pizza_poster.png') }}">
+{% endblock right_img %}
+
+{% block nav %}
+<a href="{{url_for('home')}}">
+    <p>home</p>
+</a>
+<a href="{{url_for('contact')}}">
+    <p>contact</p>
+</a>
+{% endblock nav %}
+
+{% block main1 %}
+<div class="main1" id="about">
+    <div class="img_box">
+        <img src="{{ url_for('static',filename='images/dominos_pizza_poster.png') }}" alt="ログインイメージ">
+    </div>
+    <div class="text">
+        <p>what is this</p>
+        <h1>BlackFriday</h1> 
+        <p>
+        バイト先のドミノで作った初の紙媒体作品。Figmaを用いて作りました！A4という限られたアートボード上でいつも作るwebデザインとサイズ感が全然違うので文字サイズの選定に苦労しました。が、「見やすい」「選びやすい」という感想を得られました！作って良かったです:)
+        </p>
+    </div>
+</div>
+{% endblock main1 %}
+
+{% block main2_title %}
+拡大して見る
+{% endblock main2_title %}
+
+{% block works_content %}
+<div class="works">
+    <a href="{{ url_for('static',filename='images/dominos_pizza_poster.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/dominos_pizza_poster.png' )}}" alt="home image"></a>
+</div>
+{% endblock works_content %}
+
+{% block footer %}
+{% block main3 %}
+
+{% endblock main3 %}
+<a class="home" href="{{ url_for('home') }}"><p>home</p></a>
+<a href="#"><p>top</p></a>
+<a href="{{ url_for('contact') }}" ><p>contact</p></a>
+{% endblock footer %}
