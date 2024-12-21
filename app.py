@@ -6,7 +6,6 @@ import boto3
 from dotenv import load_dotenv
 import json
 from werkzeug.utils import secure_filename
-import aws_s3
 from datetime import datetime
 from sqlalchemy.dialects.postgresql import JSON
 
