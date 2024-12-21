@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 #データベース設定
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iotabata:XbYo1bEZClKT3sQOxGXJphBfCksfT0LU@dpg-ctj6915svqrc7386dcpg-a:5432/iotabata_db_for_flask_app'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iotabata:hoKvRQ2ojxTyouzYidvcM553GTtQXVvf@dpg-ctj6jt5svqrc7386fna0-a:5432/iotabata_db_for_flask_app_rexz'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 
