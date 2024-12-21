@@ -8,6 +8,7 @@ import json
 from werkzeug.utils import secure_filename
 from datetime import datetime
 from sqlalchemy.dialects.postgresql import JSON
+import typing_extensions
 
 # 環境変数を読み込む
 load_dotenv()  # .envファイルを読み込む
