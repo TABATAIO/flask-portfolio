@@ -10,12 +10,12 @@ from datetime import datetime
 from sqlalchemy.dialects.postgresql import JSON
 
 # 環境変数を読み込む
-load_dotenv('./etc/secrets/.env')  # .envファイルを読み込む
+load_dotenv('./etc/secrets/')  # .envファイルを読み込む
 
 app = Flask(__name__)
 
 #データベース設定
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iotabata:XbYo1bEZClKT3sQOxGXJphBfCksfT0LU@dpg-ctj6915svqrc7386dcpg-a:5432/iotabata_db_for_flask_app'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
@@ -129,6 +129,16 @@ def upload_to_s3(file, filename):
 def work_detail(work_id):
     work = Works.query.get_or_404(work_id)
     return render_template('detail.jinja', content=work, otherimgs=json.loads(work.otherimgs), topimg = work.topimg)
+
+#renderで環境設定に入れた鍵をちゃんと読めてるかの確認
+@app.route('/check-env')
+def check_env():
+    return {
+        "S3_BUCKET": os.getenv('S3_BUCKET'),
+        "AWS_ACCESS_KEY_ID": os.getenv('AWS_ACCESS_KEY_ID'),
+        "AWS_SECRET_ACCESS_KEY": "HIDDEN_FOR_SECURITY",  # セキュリティ上非表示
+        "AWS_REGION": os.getenv('AWS_REGION')
+    }
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5001, debug=True)
