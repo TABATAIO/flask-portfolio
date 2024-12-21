@@ -8,16 +8,15 @@ import json
 from werkzeug.utils import secure_filename
 from datetime import datetime
 from sqlalchemy.dialects.postgresql import JSON
-import typing_extensions
 
 # 環境変数を読み込む
-load_dotenv()  # .envファイルを読み込む
+load_dotenv('./etc/secrets/.env')  # .envファイルを読み込む
 
 app = Flask(__name__)
 
 #データベース設定
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iotabata:iotabata@127.0.0.1:5432/PORTFOLIO'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://iotabata:XbYo1bEZClKT3sQOxGXJphBfCksfT0LU@dpg-ctj6915svqrc7386dcpg-a:5432/iotabata_db_for_flask_app'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 
