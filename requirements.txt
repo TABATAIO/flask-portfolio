@@ -7,3 +7,4 @@ python-dotenv==1.0.0
 Werkzeug==2.3.7
 psycopg2-binary==2.9.9
 psycopg2>=2.9
+authlib
