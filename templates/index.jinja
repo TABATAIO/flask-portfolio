@@ -41,7 +41,7 @@ WHAT HAVE I DONE
 </div>
 <div class="works">
     <a href="{{ url_for('dominos') }}" class="image-container"><img
-        src="{{ url_for('static', filename='images/Login.png') }}" alt=""></a>
+        src="{{ url_for('static', filename='images/dominos_pizza_poster.png') }}" alt=""></a>
     <a href="{{ url_for('brighttech') }}" class="image-container"><img
         src="{{ url_for('static',filename='images/Top.png') }}" alt=""></a>
     <a href="{{ url_for('Logos') }}" class="image-container"><img src="{{ url_for('static',filename='images/logo1.png')}}" alt="preparing"></a>
@@ -60,4 +60,5 @@ WHAT HAVE I DONE
 <a href="#about" ><p>about</p></a>
 <a href="#works" ><p>works</p></a>
 <a href="{{url_for('contact')}}"><p>contact</p></a>
+<a href="{{url_for('add_page')}}"><p>add_page</p></a>
 {% endblock footer %}

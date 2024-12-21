@@ -13,8 +13,11 @@ Logos
 {% endblock right_img %}
 
 {% block main1 %}
-<div class="main1" id="about">       
-    <img src="{{ url_for('static',filename='images/logo1.png') }}" alt="me_in_festival">
+<div class="main1" id="about"> 
+    <div class="img_box" >
+        <img src="{{ url_for('static',filename='images/logo1.png') }}" alt="me_in_festival">
+    </div>      
+    
     <div class="text">
         <p></p>
         <h1>ロゴたち</h1>
@@ -31,8 +34,6 @@ Logos
         <a href="{{ url_for('static',filename='images/app_logoMIGAKE.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/app_logoMIGAKE.png' )}}" alt="MIGAKEのアプリアイコン"></a>
         <a href="{{ url_for('static',filename='images/EcoWave_Ventures_logo.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/EcoWave_Ventures_logo.png') }}" alt="build before"></a>
         <a href="{{ url_for('static',filename='images/windelect.svg') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/windelect.svg') }}" alt="build after"></a>
-    </div>
-    <div class="works">
         <a href="{{ url_for('static',filename='images/my_logo.png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/my_logo.png') }}" alt="fashion fv"></a>
         <a href="{{ url_for('static',filename='images/unknown_coffee_logo-(1)/png') }}" data-lightbox="group" class="image-container"><img src="{{ url_for('static',filename='images/unknown_coffee_logo-(1).png') }}" alt="how worked on figma"></a>
     </div>

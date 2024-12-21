@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Page - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="add-page">
+        <h1>Add New Page</h1>
+        <form action="/add_page" method="POST" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="second_title">SecondTitle:</label>
+            <input type="text" id="secondtitle" name="secondtitle" required><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea><br>
+
+            <label for="topimg">Top_Image:</label>
+            <input type="file" id="topimg" name="topimg" required><br>
+
+            <label for="otherimage">Other_Images:</label>
+            <input type="file" id="otherimage" name="otherimage" multiple><br>
+
+            <button class="add_page_btn" type="submit">Add Page</button>
+        </form>
+    </div>
+
+    <div class="back-link">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+
+</body>
+</html>

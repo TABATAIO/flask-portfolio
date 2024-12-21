@@ -1,0 +1,49 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    {{ content.title }}
+{% endblock title %}
+{% block FV_title %}
+    {{ content.title }}
+{% endblock FV_title %}
+{% block nav %}
+<a href="{{url_for('home')}}">
+    <p>home</p>
+</a>
+<a href="{{url_for('contact')}}">
+    <p>contact</p>
+</a>
+{% endblock nav %}
+{% block right_img %}
+<img class="right_img" src="{{ topimg }}" alt="Top Image"> 
+{% endblock right_img %}
+{% block main1 %}
+<div class="main1" id="about">
+    <div class="img_box">
+        <img src="{{ topimg }}" alt="ログインイメージ">
+    </div>
+    <div class="text">
+        <p>what is this</p>
+        <h1>{{ content.secondtitle }}</h1>
+        <p>{{ content.description }}</p>
+    </div>
+</div>
+
+{% endblock main1 %}
+{% block main2_otherimages %}
+{% for url in otherimgs %}
+
+<a href="{{ url }}" class="image-container"><img src="{{ url }}" alt="Other Image"></a>
+
+{% endfor %}
+{% endblock main2_otherimages %}
+
+{% block main3 %}
+
+{% endblock main3 %}
+{% block footer %}
+<a class="home" href="{{ url_for('home') }}"><p>home</p></a>
+<a href="#"><p>top</p></a>
+<a href="{{ url_for('contact') }}" ><p>contact</p></a>
+{% endblock footer %}
+
