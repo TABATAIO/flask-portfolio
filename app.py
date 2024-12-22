@@ -197,6 +197,9 @@ def check_env():
         "AWS_ACCESS_KEY_ID": os.getenv('AWS_ACCESS_KEY_ID'),
         "AWS_SECRET_ACCESS_KEY": "HIDDEN_FOR_SECURITY",  # セキュリティ上非表示
         "AWS_REGION": os.getenv('AWS_REGION')
+        "AUTH0_DOMAIN": app.config['AUTH0_DOMAIN'],
+        "AUTH0_CLIENT_ID": app.config['AUTH0_CLIENT_ID'],
+        "AUTH0_CLIENT_SECRET": "HIDDEN"  # セキュリティ上非表示
     }
 
 if __name__ == "__main__":
