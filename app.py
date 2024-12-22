@@ -46,7 +46,7 @@ auth0 = oauth.register(
     client_kwargs={
         'scope': 'openid profile email',
     },
-    jwks_url=f"https://{app.config['AUTH0_DOMAIN']}/.well-known/jwks.json"
+    server_metadata_url=f"https://{app.config['AUTH0_DOMAIN']}/.well-known/jwks.json"
 )
 
 # AWS S3クライアント
