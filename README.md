@@ -30,7 +30,10 @@
 
 <!-- 説明 -->
  ## ちょこっと解説
-<h1>Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプリ</h1>
+<h2>Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプリ</h2>
+<p>
+  Add_pageにてテキストと画像をフォームで受け取り、テキストはそのままdbに、画像はAmazon AWS S3にアップロードしたのち、そのurlをdbに格納して'/work/<int:work_id>'でidを取得してdbからた値を持ってきてdetail.jinjaで組み合わせて表示している。
+</p>
 
 <!-- tree -->
 ## tree
@@ -143,5 +146,5 @@
     ├── dominos_blackfriday_poster.jinja
     └── index.jinja
 
-    ** セキュリティー保護のため'.env'はgit上にはあげていません。
+    セキュリティー保護のため'.env'はgit上にはあげていません。
 </p>
