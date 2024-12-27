@@ -32,7 +32,7 @@
  ## ちょこっと解説
 <h2>Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプリ</h2>
 <p>
-  Add_pageにてテキストと画像をフォームで受け取り、テキストはそのままdbに、画像はAmazon AWS S3にアップロードしたのち、そのurlをdbに格納して'/work/<int:work_id>'でidを取得してdbからた値を持ってきてdetail.jinjaで組み合わせて表示している。
+  Add_pageにてテキストと画像をフォームで受け取り、テキストはそのままdbに、画像はAmazon AWS S3にアップロードしたのち、そのurlをdbに格納して"/work/< int:work_id>"でidを取得してdbからた値を持ってきてdetail.jinjaで組み合わせて表示している。
 </p>
 
 <!-- tree -->
