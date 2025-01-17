@@ -42,7 +42,7 @@ WHAT HAVE I DONE
 <div class="works">
     <a href="{{ url_for('dominos') }}" class="image-container"><img
         src="{{ url_for('static', filename='images/dominos_pizza_poster.png') }}" alt=""></a>
-    <a href="{{ url_for('/work/1') }}" class="image-container"><img
+    <a href="{{ url_for('work_detail',work_id=2) }}" class="image-container"><img
         src="{{ url_for('static',filename='images/Login.png') }}" alt=""></a>
     <a href="{{ url_for('Logos') }}" class="image-container"><img src="{{ url_for('static',filename='images/logo1.png')}}" alt="preparing"></a>
 </div>
