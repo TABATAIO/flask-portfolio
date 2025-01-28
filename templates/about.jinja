@@ -20,3 +20,22 @@ Introduce
 {% block main2 %}
 
 {% endblock main2 %}
+
+{% block main3 %}
+ <div class="main3">
+    <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+    <div class="introduce_text_box">
+        <div class="history_box">
+            <p>'04 誕生<br>'23 国府高校 卒業<br>'26 KADOKAWAドワンゴ情報工科学院 卒業見込み</p>
+        </div>
+        <div class="skill_icons">
+        <i class="fa-solid fa-pepper-hot"></i>
+        <i class="fa-brands fa-figma"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3"></i>
+        <i class="fa-brands fa-python"></i>
+        
+        </div>
+    </div>
+</div>
+{% endblock main3 %}
