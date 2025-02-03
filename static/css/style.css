@@ -405,6 +405,7 @@ transform: translateY(-50%);
 .circle:hover .logo{
     width: 200px;
     height: 200px;
+    color: #fff;
 }
 
 .main3{
@@ -734,4 +735,52 @@ input[type="file"] {
         margin: 0;
     }
 
-    footer 
+    footer a{
+        width: 9.5vw;
+        height: 9.5vw;
+        margin: 6vw;
+    }
+    
+    footer p{
+        width: 6vw;
+        height: 6vw;
+        color: white;
+        visibility: hidden;
+        margin: 4vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home{
+        background-image: url(../images/icon_home.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .about{
+        background-image: url(../images/icon_about.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .work_footer{
+        background-image: url(../images/icon_works.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .contact{
+        background-image: url(../images/icon_contact.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .up{
+        background-image: url(../images/icon_top.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+}
