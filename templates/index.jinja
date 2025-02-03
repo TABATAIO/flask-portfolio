@@ -56,9 +56,13 @@ WHAT HAVE I DONE
 {% endblock main3 %}
 
 {% block footer %}
-<a href="#"><p>top</p></a>
-<a href="#about" ><p>about</p></a>
-<a href="#works" ><p>works</p></a>
-<a href="{{url_for('contact')}}"><p>contact</p></a>
-<a href="{{url_for('add_page')}}"><p>add_page</p></a>
+<div class="console">
+    <img src="./static/img/EcoWave Ventures_logo.svg" alt="Logo" class="logo">
+    <div class="circle">
+        <div class="label top"><a href=""><p>top</p></a></div>
+        <div class="label about"><a href="{{url_for('add_page')}}"><p>add_page</p></a></div>
+        <div class="label recruit"><a href="#works"><p>works</p></a></div>
+        <div class="label contact"><a href="{{ url_for('.contact') }}"><p>contact</p></a></div>
+    </div>
+</div>
 {% endblock footer %}
