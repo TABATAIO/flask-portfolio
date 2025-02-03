@@ -362,19 +362,19 @@ footer{
 }
 
 .label.top {
-    top: 10px;
-    left: 10px;
+    top: 35px;
+    left: -10px;
     transform: translateX(-50%);
 }
 
 .label.about {
-bottom: 16px;
-right: -93px;
+bottom: 28px;
+right: -155px;
 transform: translateX(-50%);
 }
 
 .label.recruit {
-top: 30px;
+top: 80px;
 right: -64px;
 transform: translateY(-50%);
 }
