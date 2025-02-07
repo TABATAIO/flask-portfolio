@@ -104,6 +104,7 @@
         {% endblock main1 %}
         {% block main2 %}
         <div class="main2" id="works">
+            {% block works_section %}
             <h1>{% block main2_title %}
 
                 {% endblock main2_title %}</h1>
@@ -118,7 +119,9 @@
                 <a href="#" class="image-container"><img src="../img/schoolfecworks.png" alt="preparing"></a>
                 {% endblock main2_otherimages %}
             </div>
-            {% endblock works_content %}</div>
+            {% endblock works_content %}
+            {% endblock works_section%}
+        </div>
         {% endblock main2 %}
         {% block main3 %}
         <div class="main3">

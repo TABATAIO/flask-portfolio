@@ -27,29 +27,11 @@ Tabata Io
 
 {% endblock main1 %}
 
-{% block main2_title %}
-WHAT HAVE I DONE
-{% endblock main2_title %}
-
-{% block works_content %}
-<div class="works">
-    <a href="{{ url_for('migake') }}" class="image-container"><img
-        src="{{ url_for('static', filename='images/Login.png') }}" alt=""></a>
-    <a href="{{ url_for('brighttech') }}" class="image-container"><img
-        src="{{ url_for('static',filename='images/Top.png') }}" alt=""></a>
-    <a href="{{ url_for('Logos') }}" class="image-container"><img src="{{ url_for('static',filename='images/logo1.png')}}" alt="preparing"></a>
-</div>
-<div class="works">
-    <a href="{{ url_for('dominos') }}" class="image-container"><img
-        src="{{ url_for('static', filename='images/dominos_pizza_poster.png') }}" alt=""></a>
-    <a href="{{ url_for('work_detail',work_id=2) }}" class="image-container"><img
-        src="{{ url_for('static',filename='images/Login.png') }}" alt=""></a>
-    <a href="{{ url_for('Logos') }}" class="image-container"><img src="{{ url_for('static',filename='images/logo1.png')}}" alt="preparing"></a>
-</div>
-
-    
-    
-{% endblock works_content %}
+{% block works_section %}
+    {% include 'works_section01.jinja' %}
+    <hr>
+    {% include 'works_section02.jinja' %}
+{% endblock works_section %}
 
 {% block main3 %}
 

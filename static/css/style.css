@@ -317,6 +317,11 @@ footer{
     position: relative;
 }
 
+hr{
+    height: 20vh;
+    border: 0;
+}
+
 .logo {
     position: absolute;
     top: 47%;
