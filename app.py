@@ -92,8 +92,8 @@ class Works(db.Model):
 #root↓
 @app.route('/')
 def home():
-    works = Works.query.all()  # 全ての works を取得
-    return render_template('index.jinja',content=works, topimg = works.topimg)
+    work = Works.query.get_or_404()
+    return render_template('index.jinja',content=work, topimg = work.topimg)
     
 @app.route('/work/MIGAKE')
 def migake():
