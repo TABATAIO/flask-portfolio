@@ -30,7 +30,7 @@ Tabata Io
 {% block works_section %}
     {% include 'works_section01.jinja' %}
     <hr>
-    {% include 'works_section02.jinja' %}
+    {% include 'works_section02.jinja' with works=works %}
 {% endblock works_section %}
 
 {% block main3 %}
