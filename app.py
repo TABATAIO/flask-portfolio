@@ -92,7 +92,7 @@ class Works(db.Model):
 #root↓
 @app.route('/')
 def home():
-    works = Works.query.order_by(Works.created_at.desc()).all()  # 全データを取得
+    works = Works.query.all()  # 全データを取得
     return render_template('index.jinja', works=works)
     
 @app.route('/work/MIGAKE')
