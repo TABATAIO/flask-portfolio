@@ -92,6 +92,7 @@ class Works(db.Model):
 #root↓
 @app.route('/')
 def home():
+    works = get_works_from_db()
     return render_template('index.jinja')
     
 @app.route('/work/MIGAKE')
