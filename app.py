@@ -93,7 +93,7 @@ class Works(db.Model):
 @app.route('/')
 def home():
     works = Works.query.all()  # 全ての works を取得
-    return render_template('index.jinja')
+    return render_template('index.jinja',works=works)
     
 @app.route('/work/MIGAKE')
 def migake():
