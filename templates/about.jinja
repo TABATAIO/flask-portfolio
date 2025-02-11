@@ -34,8 +34,19 @@ Introduce
         <i class="fa-brands fa-html5"></i>
         <i class="fa-brands fa-css3"></i>
         <i class="fa-brands fa-python"></i>
-        
+
         </div>
     </div>
 </div>
 {% endblock main3 %}
+{% block footer %}
+<div class="console">
+    <img src="../static/images/SVG/forsplash_namelogo.svg" alt="Logo" class="logo">
+    <div class="circle">
+        <div class="label top"><a href=""><p>top</p></a></div>
+        <div class="label about"><a href="{{url_for('add_page')}}"><p>add_page</p></a></div>
+        <div class="label recruit"><a href="{{ url_for('index') }}"><p>home</p></a></div>
+        <div class="label contact"><a href="{{ url_for('.contact') }}"><p>contact</p></a></div>
+    </div>
+</div>
+{% endblock footer %}
