@@ -92,7 +92,7 @@ class Works(db.Model):
 #root↓
 @app.route('/')
 def home():
-    works = get_works_from_db()
+    works = Works.query.all()  # 全ての works を取得
     return render_template('index.jinja')
     
 @app.route('/work/MIGAKE')
