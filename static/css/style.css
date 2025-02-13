@@ -489,7 +489,7 @@ input[type="file"] {
 
 
 
-@media (max-width:390px) {
+@media (max-width:450px) {
     html{
         overflow-x: hidden;
     }
@@ -691,7 +691,7 @@ input[type="file"] {
         background-repeat: no-repeat; /* 画像をカバーするように調整 */
         background-position: center; /* 中央に画像を表示 */
         padding: 4vw 0;
-        margin: 0 0 25.4vw 0 ;
+        margin: 0;
     }
     
     .main2 h1 {
@@ -726,66 +726,112 @@ input[type="file"] {
         border-radius: 5.1vw;
     }
     
-    footer {
+    footer{
         width: 100%;
-        max-width: 390px;
         display: flex;
-        text-align: center;
-        justify-content: center;
-        background-color: #2f2f2f;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-    }
-
-    footer a{
-        width: 9.5vw;
-        height: 9.5vw;
-        margin: 6vw;
-    }
-    
-    footer p{
-        width: 6vw;
-        height: 6vw;
-        color: white;
-        visibility: hidden;
-        margin: 4vw;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        width: 100%;
+        height: fit-content;
+        background-color: #434343;
+        position: relative;
+        padding: 3vw 0;
     }
-
-    .home{
-        background-image: url(../images/icon_home.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    
+    hr{
+        height: 20vh;
+        border: 0;
     }
-    .about{
-        background-image: url(../images/icon_about.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    
+    .logo {
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 17vw;
+        height: 17vw;
+        transition: all 0.3s;
+        z-index: 100;
     }
-    .work_footer{
-        background-image: url(../images/icon_works.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    
+    .logo:hover{
+        width: 13vw;
+        height: 13vw;
     }
-    .contact{
-        background-image: url(../images/icon_contact.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    
+    .console {
+        position: relative;
+        width: 20vw;
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .up{
-        background-image: url(../images/icon_top.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    .circle {
+        position: relative;
+        width: 0%;
+        height: 0%;
+        border-radius: 50%;
+        background-color: #fff;
+        transition: all 0.3s;
+    }
+    .label {
+        opacity: 0;
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        transition: opacity .3s ease;
+        cursor: pointer;
+    }
+    
+    .label a{
+      color: #fff;
+    }
+    
+    .label.top {
+        top: 1.4vw;
+        left: -2.4vw;
+        transform: translateX(-50%);
+    }
+    
+    .label.about {
+    bottom: 2vw;
+    right: -20vw;
+    transform: translateX(-50%);
+    }
+    
+    .label.recruit {
+    top: 6.5vw;
+    right: -8.4vw;
+    transform: translateY(-50%);
+    }
+    
+    .label.contact {
+    bottom: -3.7vw;
+    left: -11vw;
+    transform: translateY(-50%);
+    }
+    
+    .logo:hover+.circle{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .logo:hover ~ .circle .label {
+        opacity: 1;
+    }
+    
+    .circle:hover{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .circle:hover  .label{
+        opacity: 1;
+    }
+    .circle:hover .logo{
+        width: 200px;
+        height: 200px;
     }
 
 }
