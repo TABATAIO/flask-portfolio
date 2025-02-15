@@ -132,7 +132,7 @@ nav a{
     position: fixed;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
 }
 .splash_container .splash_content{
     width: 100%;
@@ -307,7 +307,7 @@ main{
 
 footer{
     width: 100%;
-    height: 250px;
+    height: 17.36vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,21 +327,21 @@ hr{
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
+    width: 17.36vw;
+    height: 17.36vw;
     transition: all 0.3s;
-    z-index: 100;
+    z-index: 99;
 }
 
 .logo:hover{
-    width: 200px;
-    height: 200px;
+    width: 13.8vw;
+    height: 13.8vw;
 }
 
 .console {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 20.83vw;
+    height: 20.83vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,26 +368,26 @@ hr{
 }
 
 .label.top {
-    top: 35px;
-    left: -10px;
+    top: 2.43vw;
+    left: -0.69vw;
     transform: translateX(-50%);
 }
 
 .label.about {
-bottom: 28px;
-right: -155px;
+bottom: 1.94vw;
+right: -7.98vw;
 transform: translateX(-50%);
 }
 
 .label.recruit {
-top: 80px;
-right: -64px;
+top: 5.55vw;
+right: -4.44vw;
 transform: translateY(-50%);
 }
 
 .label.contact {
-bottom: -6px;
-left: -79px;
+bottom: -0.41vw;
+left: -5.48vw;
 transform: translateY(-50%);
 }
 
@@ -409,8 +409,8 @@ transform: translateY(-50%);
     opacity: 1;
 }
 .circle:hover .logo{
-    width: 200px;
-    height: 200px;
+    width: 13.88vw;
+    height: 13.88vw;
 }
 
 .main3{
@@ -428,7 +428,7 @@ transform: translateY(-50%);
     width: 50%;
     height: 82%;
     object-fit: cover;
-    box-shadow: -40px -30px #2f2f2f;
+    box-shadow: -2.77vw -2.08vw #2f2f2f;
 }
 
 .main3 .introduce_box{
