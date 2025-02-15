@@ -416,7 +416,6 @@ transform: translateY(-50%);
 .main3{
     margin: 0;
     width: 70%;
-    height: 41vw;
     display: flex;
     flex-flow: column;
     padding: 12% 15%;
@@ -496,9 +495,8 @@ input[type="file"] {
 
     body{
         width: 100%;
-        font-family: "Noto Sans JP", sans-serif;
+        font-weight: bold;
         font-optical-sizing: auto;
-        font-weight: 300;
         font-style: normal;
         margin: 0;
         line-height: 1.5;
@@ -725,6 +723,19 @@ input[type="file"] {
         aspect-ratio: 1/1;
         border-radius: 5.1vw;
     }
+
+    .main3{
+        font-family: sans-serif;
+        padding: 20% 15%;
+    }
+
+    .main3 img{
+        box-shadow: -15px -15px #2f2f2f;
+    }
+
+    .main3 .introduce_text h2{
+        font-size: 1.2rem;
+    }
     
     footer{
         width: 100%;
@@ -796,13 +807,13 @@ input[type="file"] {
     
     .label.about {
     bottom: 2vw;
-    right: -20vw;
+    right: -22vw;
     transform: translateX(-50%);
     }
     
     .label.recruit {
     top: 6.5vw;
-    right: -8.4vw;
+    right: -9.4vw;
     transform: translateY(-50%);
     }
     
