@@ -76,7 +76,7 @@ class Works(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     secondtitle = db.Column(db.String(225))
-    description = db.Column(db.String(500))
+    description = db.Column(db.Text)
     topimg = db.Column(db.String(225))
     otherimgs = db.Column(JSON, nullable=True)  # JSON形式で複数画像のURLを保存
     created_at = db.Column(db.DateTime,default = datetime.now)
