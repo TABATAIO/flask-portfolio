@@ -176,6 +176,7 @@ main{
 
 .main1 .text{
     max-width: 30vw;
+    max-height: 60vw;
     padding: 0 3.5vw 0 3.5vw;
     margin: 0 0 0 3.5vw;
     display: flex;
@@ -272,15 +273,19 @@ main{
     display: flex;
     justify-content: center;
     gap: 5vw; /* 画像間に余白を追加 */
-    margin: 4% 14%;
+    margin: 4% 0;
+    overflow-y: scroll;
 }
 
 .works .image-container {
     width: 100%;
-    max-width: 300px; /* 最大幅を設定 */
+    min-width: 21vw;
+    height: 21vw;
+    max-width: 300px;
     position: relative;
     overflow-x: scroll;
 }
+
 
 .works .image-container img {
     width: 100%;
