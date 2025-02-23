@@ -97,9 +97,8 @@ nav a{
     position: absolute;
     top: 41.6vw;
     left: 21.4vw;
-    color: #FFFFFF;
+    color: #919191;
     z-index: 1;
-    mix-blend-mode: difference;
 }
 
 .right .right_img{
@@ -847,7 +846,4 @@ input[type="file"] {
     }
     .circle:hover .logo{
         width: 200px;
-        height: 200px;
-    }
-
-}
+    
