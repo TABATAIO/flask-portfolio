@@ -846,4 +846,7 @@ input[type="file"] {
     }
     .circle:hover .logo{
         width: 200px;
-    
+        height: 200px;
+    }
+
+}
