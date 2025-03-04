@@ -25,19 +25,33 @@ Introduce
  <div class="main3">
     <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
     <div class="introduce_text_box">
-        <div class="history_box">
-            <p>'04 誕生<br>'23 国府高校 卒業<br>'26 KADOKAWAドワンゴ情報工科学院 卒業見込み</p>
-        </div>
-        <div class="skill_icons">
+        {# <div class="skill_icons">
         <i class="fa-solid fa-pepper-hot"></i>
         <i class="fa-brands fa-figma"></i>
         <i class="fa-brands fa-html5"></i>
         <i class="fa-brands fa-css3"></i>
         <i class="fa-brands fa-python"></i>
-        </div>
+        </div> #}
         <div class="introduce_text">
             <h2>Webのマルチプレイヤー</h2>
-            <p>デザイン✖️コーディング✖️コミュニケーション<br>でイグザクトリーなものを作る</p>
+            <p>DESIGN✖️CODING✖️COMMUNUCATION<br>で<br>EXACTLYなWebサイトを！</p>
+        </div>
+        <div class="QA_box">
+            <h2 class="QA">Q&A</h2>
+            <div class="chat">
+                <div class="pop_left">休日は何を？</div>
+                <div class="pop_right">最近はデザインやコーディングの練習をしたり、息抜きにゲーム(直近で言うとDeltaForceやMonsterHunter)をしたり近場をドライブしたりしています。</div>
+                <div class="pop_left">今考えている職種は？</div>
+                <div class="pop_right">自分の強みが活かせる職につきたいと思っています。どうしてもWebについて研鑽してきたのでWeb関連の職ばかりを見てしまいますが”こんなところでも役に立てるんだ！”と言う他業種も興味があります！</div>
+            </div>
+            <div class="chat_cns">
+                <div class="inp_img_box">ほかご質問はcontactへ→</div>
+                <div class="submit_img"><a href="{{url_for('contact')}}"><img src="../static/images/Vector.svg" alt=""></a></div>
+            </div>
+            
+        </div>
+        <div class="history_box">
+            <p>'04 誕生<br>'23 国府高校 卒業<br>'26 KADOKAWAドワンゴ情報工科学院 卒業見込み</p>
         </div>
     </div>
 </div>
@@ -47,7 +61,6 @@ Introduce
     <img src="../static/images/SVG/forsplash_namelogo.svg" alt="Logo" class="logo">
     <div class="circle">
         <div class="label top"><a href=""><p>top</p></a></div>
-        <div class="label about"><a href="{{url_for('add_page')}}"><p>add_page</p></a></div>
         <div class="label recruit"><a href="{{ url_for('home') }}"><p>home</p></a></div>
         <div class="label contact"><a href="{{ url_for('.contact') }}"><p>contact</p></a></div>
     </div>
