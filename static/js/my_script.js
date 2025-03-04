@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded",() =>{
   const today = new Date().toString();// 今日の日付を文字列にする
 
 
-  const lastShoeDate = localStorage.getItem("splashLastShowDate");
+  const lastShowDate = localStorage.getItem("splashLastShowDate");
   let viewCount = parseInt(localStorage.getItem("splashViewCount")||0);
 
 //次の日になったら更新
-  if (lastShoeDate !== today){
+  if (lastShowDate !== today){
     viewCount = 0;
     localStorage.setItem("splashLastShowDate",today);
   }
