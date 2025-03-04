@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/-Flask-092E20.svg?logo=flask&style=for-the-badge">
   <!-- バックエンドの言語一覧 -->
   <img src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
+  <img src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=javascript&style=for-the-badge">
   <!-- ミドルウェア一覧 -->
   <img src="https://img.shields.io/badge/-Postgresql-4479A1.svg?logo=postgresql&style=for-the-badge&logoColor=white">
   <!-- インフラ一覧 -->
