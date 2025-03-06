@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="splash_container" id="splash">
+    <div class="splash_container" id="splash_container">
         <div class="splash_content">
             <svg id="_レイヤー_1" data-name="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" version="1.1" viewBox="0 0 640 480">
             <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
@@ -71,11 +71,11 @@
                 <h1>{% block FV_title %}
 
                     {% endblock FV_title %}</h1>
-                <img class="left_img" src="../static/images/wave1.png" alt="">
+                <img class="left_img animations"  src="../static/images/wave1.png" alt="">
             </div>
 
             <div class="right">
-                <nav class="nav">
+                <nav class="nav animations">
                 {% block nav %}
                 <a href="#about">
                     <p>about</p>
@@ -90,7 +90,7 @@
                    
                 </nav>
                 {% block right_img %}
-                <img class="right_img" src="{{ url_for('static', filename='./images/me_child.png') }}"
+                <img class="right_img animations" src="{{ url_for('static', filename='./images/me_child.png') }}"
                     alt="me_in_child">
                 {% endblock right_img %}
 
