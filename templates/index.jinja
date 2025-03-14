@@ -22,7 +22,7 @@ Tabata Io
         <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
     </div>
     <div class="text">
-        <p>WHO I AM</p>
+        <h3>WHO I AM</h3>
         <h1>HELLO</h1>
         <p>KDGN2年webエンジニア専攻<br>webのデザインエンジニアになれるように日々奮闘中！</p>
         <button><a href="{{ url_for('about') }}"><p>Learn more</p></a></button>
@@ -32,10 +32,12 @@ Tabata Io
 {% endblock main1 %}
 
 {% block works_section %}
-    {% include 'works_section01.jinja' %}
+    {%include 'works_section01.jinja'%}
+    <hr>
+    {% include 'works_section02.jinja' %}
     <hr>
     {% with works=works %}
-    {% include 'works_section02.jinja'%}
+    {% include 'works_section03.jinja'%}
     {% endwith %}
 {% endblock works_section %}
 

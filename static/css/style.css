@@ -10,6 +10,8 @@ body{
     line-height: 1.5;
 }
 
+
+
 .vdbanner{
     nav-index: -60px 0;
 }
@@ -164,10 +166,11 @@ main{
 
 .main1 .img_box{
     width: 50%;
+    padding: 0;
     height: 72%;
     object-fit: cover;
     box-shadow: -40px -30px #2f2f2f;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .img_box img{
@@ -187,8 +190,11 @@ main{
     background-color: rgba(255,255, 255, 0.5);
 }
 .text p{
-    overflow-wrap: break-word;
-    overflow-x: scroll;
+    overflow: scroll;
+}
+
+.text p::-webkit-scrollbar{
+    display: none;
 }
 
 .text button{
@@ -272,10 +278,12 @@ main{
 .main2 .works {
     display: flex;
     justify-content: center;
-    gap: 5vw; /* 画像間に余白を追加 */
-    margin: 4% 0;
-    overflow-y: scroll;
+    margin: 4% 4.5vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-color: #fff rgba(0,0,0,0);
 }
+
 
 .works .image-container {
     width: 100%;
@@ -283,7 +291,7 @@ main{
     height: 21vw;
     max-width: 300px;
     position: relative;
-    overflow-x: scroll;
+    margin: 0 0 0 40px;
 }
 
 
@@ -323,7 +331,7 @@ footer{
 }
 
 hr{
-    height: 20vh;
+    height: 10vw;
     border: 0;
 }
 
@@ -833,6 +841,7 @@ input[type="file"] {
         justify-content: center;
         gap: 5vw; /* 画像間に余白を追加 */
         margin: 0 14%;
+        overflow: visible;
     }
     
     .works .image-container {

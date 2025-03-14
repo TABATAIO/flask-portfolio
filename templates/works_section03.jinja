@@ -1,0 +1,8 @@
+<h1>WHAT HAVE I DONE(動的)</h1>
+<div class="works">
+    {% for work in works %}
+        <a href="{{ url_for('work_detail', work_id=work.id) }}" class="image-container">
+            <img src="{{ work.topimg }}" alt="for detail">
+        </a>
+    {% endfor %}
+</div>
