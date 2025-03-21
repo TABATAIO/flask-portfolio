@@ -119,6 +119,14 @@ def Logos():
 def dominos():
     return render_template('dominos_blackfriday_poster.jinja')
 
+@app.route('/work/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
+@app.route('/work/namelogo')
+def namelogo():
+    return render_template('namelogo.jinja')
+
 
 @app.route('/add_page', methods=['GET', 'POST'])
 @login_required
