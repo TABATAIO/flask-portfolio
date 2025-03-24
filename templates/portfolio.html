@@ -21,18 +21,65 @@
     <!-- lightbox2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <!-- 自作css -->
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/highlight.css">
 </head>
 <body>
     <header>
         <li>
-            <ul>top</ul>
-            <ul>home</ul>
-            <ul>contact</ul>
+            <ul><a href="">top</a></ul>
+            <ul><a href="{{ url_for('.home') }}">home</a></ul>
+            <ul><a href="{{ url_for('.contact') }}">contact</a></ul>
         </li>
     </header>
     <main>
-        <h1>Now making...</h1>
+        <section class="section fv">
+            <div class="logo_text">
+                <img class="logo" src="../static/images/forsplash_namelogo.svg" alt="">
+                <p class="fv_text">ミニマポートフォリオ</p>
+            </div>
+            <div class="title_img">
+                <img class="fv_img" src="../static/images/site.png" alt="">
+                <h1 class="portfolio">PORTFOLIO</h1>
+            </div>
+        </section>
+        <section class="section design">
+            <div class="title_text">
+                <h1>design</h1>
+                <p class="text">このポートフォリオサイトは、白と黒を基調としたシンプルなデザインで構成しています。視認性を重視し、無駄を削ぎ落としたミニマルなレイアウトを採用することで、訪れた人がストレスなく作品や情報を閲覧できるようにしました。また、モノクロのスタイリッシュなビジュアルを活かし、デザインそのものの魅力が引き立つように工夫しています。シンプルながらも印象に残るサイトデザインを目指しました。</p>
+            </div>
+            <div>
+                <img src="../static/images/site.png" alt="">
+            </div>
+        </section>
+        <section class="section ft">
+            <div class="title_text">
+                <h1>footer</h1>
+                <p class="text">このポートフォリオでは、シンプルなデザインの中にもインタラクションの工夫を取り入れています。ページ最下部にカーソルを合わせると、隠れていたメニューがスムーズに表示されるアニメーションを実装しました。普段はシンプルなレイアウトを保ちつつ、必要なときに直感的に操作できるデザインになっています。視認性と機能性のバランスを大切にし、ストレスなくサイトを閲覧できるように工夫しました。</p>
+            </div>
+            <div class="img_container">
+                <img src="../static/images/before.png" alt="">
+                <img src="../static/images/after.png" alt="">
+            </div>
+        </section>
+        <section class="section sp">
+            <div class="title_text">
+                <h1>splash</h1>
+                <p class="text">このポートフォリオでは、サイトを開いた瞬間の体験にもこだわりました。最初に、自作のネームロゴがスプラッシュアニメーションとして現れる演出を入れています。これは、自分のブランドを印象づけるだけでなく、サイトに訪れた人の期待感を高める役割も持っています。シンプルなデザインの中に遊び心を加えつつ、ブランディングの一環としても機能するよう工夫しました。</p>
+            </div>
+            <div>
+                <img src="../static/images/田端莞和｜Webデザイナー・フロントエンド｜ポートフォリオサイト.gif" alt="gif">
+            </div>
+        </section>
+        <section class="section skill">
+            <div class="title_text">
+                <h1>skills</h1>
+                <p class="text"></p>
+            </div>
+            <div>
+                <!-- スキルはpsで作ってはろう -->
+                <img src="../static/images/skillstacks.png" alt="">
+            </div>
+        </section>
     </main>
     <footer></footer>
     <!-- scripts -->
@@ -46,6 +93,6 @@
      <!-- progressbar.js -->
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <!-- 自作js -->
-    <script src="../static/js/my_script.js"></script>
+    <script src="../static/js/highlight.js"></script>
 </body>
 </html>
