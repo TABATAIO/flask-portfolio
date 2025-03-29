@@ -125,7 +125,7 @@ def portfolio():
 
 @app.route('/work/namelogo')
 def namelogo():
-    return render_template('namelogo.jinja')
+    return render_template('namelogo.html')
 
 
 @app.route('/add_page', methods=['GET', 'POST'])
