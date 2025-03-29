@@ -54,11 +54,18 @@ main{
     position: relative;
 }
 
-.fv_img{
+.fv1_img{
     width: 350px;
     height: 550px;
     object-fit: cover;
     overflow: hidden;
+}
+
+.fv2_img{
+    width: 350px;
+    height: 550px;
+    object-fit: cover;
+    overflow:inherit;
 }
 
 .portfolio{
@@ -77,6 +84,10 @@ main{
     height: 600px;
     object-fit: cover;
     overflow: hidden;
+}
+
+.sotuaru{
+    object-fit: contain !important;
 }
 
 
