@@ -464,6 +464,11 @@ transform: translateY(-50%);
     padding: 15px;
 }
 
+.history_box tbody td{
+    text-align: left;
+    padding-left: 20px;
+}
+
 
 
 .add-page {
