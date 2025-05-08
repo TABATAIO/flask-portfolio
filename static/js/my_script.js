@@ -1,3 +1,5 @@
+
+//smooth_scroll
 $(function () {
     $('a[href^="#"]').click(function () {
       var href = $(this).attr("href");
@@ -13,8 +15,9 @@ $(function () {
       );
       return false;
     });
-  });
-  
+});
+
+//splassh
 var bar = new ProgressBar.Path('#namelogo', {
     easing: 'easeInOut',
     duration: 3000

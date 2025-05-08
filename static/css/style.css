@@ -135,6 +135,7 @@ nav a{
     justify-content: center;
     align-items: center;
     z-index: 100;
+    display: none;
 }
 .splash_container .splash_content{
     width: 100%;
