@@ -647,8 +647,14 @@ input[type="file"] {
     
     h1{
         font-size: 5.5vw;
+        margin: 0;
         }
     
+    h3{
+        font-size: 4.5vw;
+        margin: 0;
+    }
+
     p{
         font-size: 2.8vw;
         }
@@ -674,7 +680,6 @@ input[type="file"] {
         object-fit: cover;
         }
     
-    
     nav{
         display: none;
         width: 0;
@@ -698,7 +703,7 @@ input[type="file"] {
         position: absolute;
         top: 56.5vw;
         left: 50%;
-        color: #FFFFFF;
+        color: #b0b0b0;
         z-index: 1;
     }
     
@@ -772,7 +777,8 @@ input[type="file"] {
     }
     
     .main1 .link_img{
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 24.3vw;
         justify-content: center;
         align-items: center;
@@ -843,23 +849,26 @@ input[type="file"] {
     }
     
     .main2 .works {
-        display: block;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 5vw; /* 画像間に余白を追加 */
-        margin: 0 14%;
         overflow: visible;
     }
     
     .works .image-container {
-        width: 77vw;
+        width: 60vw;
+        aspect-ratio: 16/9;
         max-width: 300px; /* 最大幅を設定 */
         height: 100%;
-        position: relative;
+        margin: 0;
     }
     
     .works .image-container img {
-        width: 77vw;
-        height: 51vw;
+        object-fit: cover;
         margin: 5vw 0;
         max-height: 300px;
         object-fit: cover; /* 画像がコンテナに収まるよう調整 */
@@ -893,7 +902,7 @@ input[type="file"] {
     }
     
     hr{
-        height: 20vh;
+        height: 5vh;
         border: 0;
     }
     
