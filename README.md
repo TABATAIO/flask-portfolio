@@ -39,7 +39,7 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
 <!-- tree -->
 ## tree
 <p>
-  .
+.
 ├── Procfile
 ├── README.md
 ├── __pycache__
@@ -63,6 +63,7 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
 │   │   ├── session.cpython-310.pyc
 │   │   ├── table.cpython-310.pyc
 │   │   └── track_modifications.cpython-310.pyc
+│   ├── __pycache__ 2
 │   ├── cli.py
 │   ├── extension.py
 │   ├── model.py
@@ -73,6 +74,7 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
 │   ├── session.py
 │   ├── table.py
 │   └── track_modifications.py
+├── googledd3d87265bc87c6c.html
 ├── migrations
 │   ├── README
 │   ├── __pycache__
@@ -100,6 +102,7 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
 │   │   ├── SVG
 │   │   │   └── forsplash_namelogo.svg
 │   │   ├── Top.png
+│   │   ├── Vector.svg
 │   │   ├── X.png
 │   │   ├── app_logoMIGAKE.png
 │   │   ├── confalence.png
@@ -146,6 +149,6 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
     ├── detail.jinja
     ├── dominos_blackfriday_poster.jinja
     └── index.jinja
-<br>
-セキュリティー保護のため'.env'はgit上にはあげていません。
+
+    セキュリティー保護のため'.env'はgit上にはあげていません。
 </p>
