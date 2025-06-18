@@ -1,0 +1,3 @@
+@app.route("/robots.txt")
+def robots_txt():
+    return Response("User-agent: *\nAllow: /\nSitemap: https://flask-portfolio-a21y.onrender.com/sitemap.xml", mimetype="text/plain")

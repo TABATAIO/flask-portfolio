@@ -836,7 +836,10 @@ input[type="file"] {
         background-image: url(../images/wave2.png);
         background-repeat: no-repeat; /* 画像をカバーするように調整 */
         background-position: center; /* 中央に画像を表示 */
-        padding: 4vw 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10vw 0;
         margin: 0;
     }
     
@@ -997,4 +1000,112 @@ input[type="file"] {
         height: 200px;
     }
 
+    .main3{
+        margin: 0;
+        width:fit-content;
+        display: flex;
+        flex-flow: column;
+        padding: 12% 8%;
+        background-image: url(../images/wood.png);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .QA_box{
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 50px;
+    }
+    
+    .QA{
+        margin: 0;
+        padding: 10px 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 50px 50px 0 0;
+    }
+    
+    .QA_box img{
+        box-shadow: none;
+    }
+    
+    .chat{
+        display: flex;
+        padding: 15px 8px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .chat p{
+        padding: 0;
+        margin: 0;
+    }
+
+    .pop_left{
+        width: fit-content;
+        text-align: left;
+        background-color: #fff;
+        padding: 6px;
+        border-radius: 10px;
+    }
+    
+    .pop_right{
+        margin-left: 39vw;
+        width: 30vw;
+        text-align: left;
+        background-color: #fff;
+        padding: 6px;
+        border-radius: 10px;
+    }
+    
+    .chat_cns {
+        width: 100%;
+        margin: 0;
+        padding: 10px 10px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .introduce_text_box{
+        font-size: 12px;
+        gap: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inp_img_box{
+        margin: 9px 0 ;
+        background-color: #F5F5F5;
+        padding: 10px;
+        border-width: 1px;
+        border-color: #000;
+        border-radius: 100px;
+    
+    }
+    
+    .submit_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F5F5F5;
+        padding: 10px;
+        border-width: 1px;
+        border-color: #000;
+        border-radius: 100px;
+        width: 25px;
+    }
+    
+    .submit_img img{
+        width: 100%;
+    }
 }
