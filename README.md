@@ -146,6 +146,6 @@ Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプ
     ├── detail.jinja
     ├── dominos_blackfriday_poster.jinja
     └── index.jinja
-
-    セキュリティー保護のため'.env'はgit上にはあげていません。
+<br>
+セキュリティー保護のため'.env'はgit上にはあげていません。
 </p>
