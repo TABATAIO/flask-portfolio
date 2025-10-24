@@ -1,103 +1,150 @@
-<div id="top"></div>
+# Flask Portfolio
 
-## 使用技術一覧
+## 📝 概要
+Flask製のポートフォリオサイト＆コンテンツ管理システム。Auth0による認証とAWS S3によるメディア管理を実装したモダンなウェブアプリケーションです。
 
-<!-- シールド一覧 -->
-<!-- 該当するプロジェクトの中から任意のものを選ぶ-->
-<p style="display: inline">
-  <!-- バックエンドのフレームワーク一覧 -->
-  <img src="https://img.shields.io/badge/-Flask-092E20.svg?logo=flask&style=for-the-badge">
-  <!-- バックエンドの言語一覧 -->
-  <img src="https://img.shields.io/badge/-Python-F2C63C.svg?logo=python&style=for-the-badge">
-  <img src="https://img.shields.io/badge/-JavaScript-F2C63C.svg?logo=javascript&style=for-the-badge">
-  <!-- ミドルウェア一覧 -->
-  <img src="https://img.shields.io/badge/-Postgresql-4479A1.svg?logo=postgresql&style=for-the-badge&logoColor=white">
-  <!-- インフラ一覧 -->
-  <img src="https://img.shields.io/badge/-Amazon%20aws%20s3-232F3E.svg?logo=amazons3&style=for-the-badge">
-</p>
+## 🛠 使用技術
 
-<!-- プロジェジェクト名 -->
-<p style="display: flex, ">
-  Flask を用いたポートフォリオサイト
-</p>
-<!-- 経緯 -->
+### バックエンド
+![Flask](https://img.shields.io/badge/-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-  ## 経緯
+### フロントエンド
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-<p>
-  静的サイトは作ったが、毎回自分でページを作るのが大変になったのと、学校で習ってことを実践するため、そして実際企業で働いた時にフロントだけ知っていても意味がないので実際のデプロイまで経験するべきと思い制作に取り掛かった。<br>
-</p>
-<span></span>
+### インフラ・その他
+![AWS S3](https://img.shields.io/badge/-Amazon%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
+![Auth0](https://img.shields.io/badge/-Auth0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-<!-- 説明 -->
- ## ちょこっと解説
-Flaskを用いたポートフォリオサイト＆自動ページ追加Webアプリ
-<p>
-  Add_pageにてテキストと画像をフォームで受け取り、テキストはそのままdbに、画像はAmazon AWS S3にアップロードしたのち、そのurlをdbに格納して"/work/< int:work_id>"でidを取得してdbからた値を持ってきてdetail.jinjaで組み合わせて表示している。
-</p>
+## ✨ 主要機能
 
-<!-- tree -->
-## tree
-<p>
-  .
-├── Procfile
-├── README.md
-├── __pycache__
-│   ├── app.cpython-310.pyc
-│   ├── aws_s3.cpython-310.pyc
-│   └── db.cpython-310.pyc
-├── app.py
-├── aws_s3.py
-├── etc
-│   └── secrets
-├── flask_sqlalchemy
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-310.pyc
-│   │   ├── cli.cpython-310.pyc
-│   │   ├── extension.cpython-310.pyc
-│   │   ├── model.cpython-310.pyc
-│   │   ├── pagination.cpython-310.pyc
-│   │   ├── query.cpython-310.pyc
-│   │   ├── record_queries.cpython-310.pyc
-│   │   ├── session.cpython-310.pyc
-│   │   ├── table.cpython-310.pyc
-│   │   └── track_modifications.cpython-310.pyc
-│   ├── cli.py
-│   ├── extension.py
-│   ├── model.py
-│   ├── pagination.py
-│   ├── py.typed
-│   ├── query.py
-│   ├── record_queries.py
-│   ├── session.py
-│   ├── table.py
-│   └── track_modifications.py
-├── migrations
-│   ├── README
-│   ├── __pycache__
-│   │   └── env.cpython-310.pyc
-│   ├── alembic.ini
-│   ├── env.py
-│   ├── script.py.mako
-│   └── versions
-│       ├── __pycache__
-│       │   └── cfe185efb922_initial_migration.cpython-310.pyc
-│       └── cfe185efb922_initial_migration.py
-├── requirements.txt
-├── static
-│   ├── css
-│   │   └── style.css
-│   ├── images
-│   │   ├── 1nennseisakubutu.png
-│   │   ├── About us.png
-│   │   ├── BUILD(_after).png
-│   │   ├── BUILD.png
-│   │   ├── Discord.png
-│   │   ├── Drnature.png
-│   │   ├── EcoWave_Ventures_logo.png
-│   │   ├── Login.png
-│   │   ├── SVG
+- 📱 レスポンシブデザイン
+- 🔒 Auth0による安全な認証
+- 💾 AWS S3によるメディアファイル管理
+- 📝 コンテンツの動的追加・編集
+- 🎨 カスタマイズ可能なポートフォリオページ
+
+## 💡 開発経緯
+
+フロントエンドだけでなく、バックエンドの実践的な経験を積むために開発を始めました。
+主な目標は：
+
+1. 動的コンテンツ管理の実装
+2. クラウドサービス（AWS S3）の活用
+3. セキュアな認証システムの導入
+4. データベース設計と管理の実践
+5. 本番環境へのデプロイ経験
+
+## 🔍 システム概要
+
+- フォームからのコンテンツ投稿機能
+- AWS S3を利用した画像管理システム
+- PostgreSQLによるデータ永続化
+- Auth0による安全な認証
+- レスポンシブなUI/UXデザイン
+
+## 🚀 セットアップ
+
+### 前提条件
+- Python 3.8以上
+- PostgreSQL
+- AWS アカウント（S3バケット用）
+- Auth0アカウント
+
+### インストール手順
+
+1. リポジトリのクローン
+```bash
+git clone https://github.com/TABATAIO/flask-portfolio.git
+cd flask-portfolio
+```
+
+2. 仮想環境の作成と有効化
+```bash
+python -m venv venv
+source venv/bin/activate  # Windowsの場合: venv\\Scripts\\activate
+```
+
+3. 依存パッケージのインストール
+```bash
+pip install -r requirements.txt
+```
+
+4. 環境変数の設定
+```bash
+# .envファイルを作成し、以下の変数を設定
+DATABASE_URL=postgresql://username:password@localhost:5432/dbname
+SECRET_KEY=your-secret-key
+AUTH0_CLIENT_ID=your-auth0-client-id
+AUTH0_CLIENT_SECRET=your-auth0-client-secret
+AUTH0_DOMAIN=your-auth0-domain
+AWS_ACCESS_KEY_ID=your-aws-access-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+AWS_REGION=your-aws-region
+S3_BUCKET=your-bucket-name
+```
+
+5. データベースのセットアップ
+```bash
+flask db upgrade
+```
+
+6. アプリケーションの起動
+```bash
+flask run
+```
+
+## 📁 プロジェクト構造
+
+```
+.
+├── app.py              # メインアプリケーション
+├── models.py           # データベースモデル
+├── routes.py           # ルート定義
+├── aws_s3.py          # AWS S3関連の処理
+├── static/            # 静的ファイル
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── templates/         # テンプレート
+├── migrations/        # データベースマイグレーション
+└── etc/
+    └── secrets/      # 環境変数
+```
+
+## 🔧 開発環境のセットアップ
+
+開発環境では以下の追加パッケージをインストールすることを推奨します：
+
+```bash
+pip install pytest pytest-cov black flake8
+```
+
+## 📝 コントリビューション
+
+1. このリポジトリをフォーク
+2. 新しいブランチを作成 (`git checkout -b feature/amazing-feature`)
+3. 変更をコミット (`git commit -m 'Add amazing feature'`)
+4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
+5. プルリクエストを作成
+
+## 📄 ライセンス
+
+[MIT License](LICENSE)
+
+## 👥 作者
+
+- TABATA IO - [GitHub](https://github.com/TABATAIO)
+
+## 🙏 謝辞
+
+- [Flask](https://flask.palletsprojects.com/)
+- [Auth0](https://auth0.com/)
+- [AWS](https://aws.amazon.com/)
 │   │   │   └── forsplash_namelogo.svg
 │   │   ├── Top.png
 │   │   ├── X.png
