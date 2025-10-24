@@ -91,7 +91,7 @@
                 </nav>
                 {% block right_img %}
                 <img class="right_img animations" src="{{ url_for('static', filename='./images/me_child.png') }}"
-                    alt="me_in_child">
+                    alt="田端莞和（子ども時代）の写真">
                 {% endblock right_img %}
 
             </div>
@@ -104,7 +104,7 @@
         {% block main1 %}
         <div class="main1" id="about">
            
-            <img src="{{ () }}" alt="me_in_festival">
+            <img src="{{ () }}" alt="プロフィール画像">
             <div class="text">
                 <h3></h3>
                 <h1></h1>
@@ -123,10 +123,10 @@
             {% block works_content %}
             <div class="works">
                 {% block main2_otherimages %}
-                <a href="{{ url_for('migake') }}" class="image-container"><img
-                        src="{{ url_for('static', filename='images/Login.png') }}" alt=""></a>
-                <a href="{{ url_for('brighttech') }}" class="image-container"><img
-                        src="{{ url_for('static',filename='images/Top.png') }}" alt=""></a>
+        <a href="{{ url_for('migake') }}" class="image-container"><img
+            src="{{ url_for('static', filename='images/Login.png') }}" alt="Login ページのスクリーンショット"></a>
+        <a href="{{ url_for('brighttech') }}" class="image-container"><img
+            src="{{ url_for('static',filename='images/Top.png') }}" alt="サイトのトップページスクリーンショット"></a>
                 <a href="#" class="image-container"><img src="../img/schoolfecworks.png" alt="preparing"></a>
                 {% endblock main2_otherimages %}
             </div>
@@ -136,7 +136,7 @@
         {% endblock main2 %}
         {% block main3 %}
         <div class="main3">
-            <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="me_in_festival">
+            <img src="{{ url_for('static',filename='images/me_adlt.png') }}" alt="田端莞和の写真">
             <div class="introduce_text_box">
                 <div class="history_box">
                     <p>'04 誕生<br>'23 国府高校 卒業<br>'26 KADOKAWAドワンゴ情報工科学院 卒業見込み</p>

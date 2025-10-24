@@ -3,6 +3,9 @@
 {% block title %}
     {{ content.title }}
 {% endblock title %}
+{% block description %}
+{{ content.description | truncate(155, True) }}
+{% endblock description %}
 {% block FV_title %}
     {{ content.title }}
 {% endblock FV_title %}
@@ -15,12 +18,12 @@
 </a>
 {% endblock nav %}
 {% block right_img %}
-<img class="right_img animations" src="{{ topimg }}" alt="Top Image"> 
+<img class="right_img animations" src="{{ topimg }}" alt="{{ content.title }} のトップ画像"> 
 {% endblock right_img %}
 {% block main1 %}
 <div class="main1" id="about">
     <div class="img_box">
-        <img src="{{ topimg }}" alt="ログインイメージ">
+        <img src="{{ topimg }}" alt="トップ画像: {{ content.title }}">
     </div>
     <div class="text">
         <h3>what is this</h3>
@@ -33,7 +36,7 @@
 {% block main2_otherimages %}
 {% for url in otherimgs %}
 
-<a href="{{ url }}" data-lightbox="group" class="image-container"><img src="{{ url }}" alt="Other Image"></a>
+<a href="{{ url }}" data-lightbox="group" class="image-container"><img src="{{ url }}" alt="{{ content.title }} の画像 {{ loop.index }}"></a>
 
 {% endfor %}
 {% endblock main2_otherimages %}
@@ -43,7 +46,7 @@
 {% endblock main3 %}
 {% block footer %}
 <div class="console">
-    <img src="../static/images/SVG/forsplash_namelogo.svg" alt="Logo" class="logo">
+    <img src="../static/images/SVG/forsplash_namelogo.svg" alt="サイトロゴ" class="logo">
     <div class="circle">
         <div class="label top"><a href=""><p>top</p></a></div>
         <div class="label recruit"><a href="{{ url_for('home') }}"><p>home</p></a></div>
