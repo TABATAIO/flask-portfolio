@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify, session
+from flask import Flask, render_template, request, redirect, url_for, jsonify, session, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from authlib.integrations.flask_client import OAuth
@@ -10,6 +10,7 @@ from werkzeug.utils import secure_filename
 from datetime import datetime
 from sqlalchemy.dialects.postgresql import JSON
 from functools import wraps
+from datetime import datetime
 
 # 環境変数を読み込む
 load_dotenv('./etc/secrets/')  # .envファイルを読み込む
@@ -19,7 +20,7 @@ app = Flask(__name__)
 #データベース設定
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
-app.config['UPLOAD_FOLDER'] = 'uploads/'
+app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(__file__), 'uploads')
 
 
 # AWSの設定を環境変数から読み込む
@@ -29,7 +30,9 @@ app.config['AWS_SECRET_ACCESS_KEY'] = os.getenv('AWS_SECRET_ACCESS_KEY')
 app.config['AWS_REGION'] = os.getenv('AWS_REGION')
 
 # Auth0設定
-app.secret_key = os.getenv('SECRET_KEY', 'your-secret-key')
+app.secret_key = os.getenv('SECRET_KEY')
+if not app.secret_key:
+    raise ValueError("SECRET_KEY must be set")
 app.config['AUTH0_CLIENT_ID'] = os.getenv('AUTH0_CLIENT_ID')
 app.config['AUTH0_CLIENT_SECRET'] = os.getenv('AUTH0_CLIENT_SECRET')
 app.config['AUTH0_DOMAIN'] = os.getenv('AUTH0_DOMAIN')
@@ -167,6 +170,7 @@ def upload_to_s3(file, filename):
     s3_client.upload_fileobj(file, app.config['S3_BUCKET'], filename)
     return f"https://{app.config['S3_BUCKET']}.s3.{app.config['AWS_REGION']}.amazonaws.com/{filename}"
 
+#動的ページの表示
 @app.route('/work/<int:work_id>')
 def work_detail(work_id):
     work = Works.query.get_or_404(work_id)
@@ -213,3 +217,36 @@ def check_env():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5001, debug=True)
+
+@app.route("/sitemap.xml", methods=["GET"])
+def sitemap():
+    pages = []
+    base_url = "https://flask-portfolio-a21y.onrender.com"
+    now = datetime.now().date().isoformat()
+
+    # 静的なページを手動で登録（必要に応じて追加）
+    static_pages = ['/', '/about', '/contact']
+    for page in static_pages:
+        pages.append(f"""
+            <url>
+                <loc>{base_url}{page}</loc>
+                <lastmod>{now}</lastmod>
+            </url>
+        """)
+
+    # 動的ページ（例：制作実績）をDBから取得
+    works = Works.query.all()
+    for work in works:
+        pages.append(f"""
+            <url>
+                <loc>{base_url}/work/{work.id}</loc>
+                <lastmod>{work.updated_at.date().isoformat()}</lastmod>
+            </url>
+        """)
+
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        {''.join(pages)}
+    </urlset>"""
+
+    return Response(sitemap_xml, mimetype='application/xml')
